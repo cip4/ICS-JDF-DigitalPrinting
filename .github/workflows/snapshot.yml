@@ -49,7 +49,7 @@ jobs:
           python Build\specbuilder.py $env:CONFIG_FILE
           "$env:JDF_FILE_NAME $env:JDF_VERSION Draft-$env:NOW Build-$env:GITHUB_RUN_NUMBER"
           "$env:JDF_VERSION Draft-$env:NOW Build-$env:GITHUB_RUN_NUMBER"
-          "Run-$env:GITHUB_RUN_NUMER"
+          "Run-$env:GITHUB_RUN_NUMBER"
 
       # Upload any artefact produced.
       - name: Upload ICS Specification artifact
