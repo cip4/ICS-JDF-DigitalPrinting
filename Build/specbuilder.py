@@ -1,23 +1,19 @@
 import logging
 import os
-#import shutil
 import sys
 import time
-#import pathlib
 import configparser
 from subprocess import call
 from subprocess import Popen
 
-
 # constants
-FILE_RUNTIME_FM = "C:\Program Files (x86)\Adobe\AdobeFrameMaker2015\FrameMaker.exe"
+FILE_RUNTIME_FM = "C:\Program Files\Adobe\Adobe FrameMaker 2020\FrameMaker.exe"
 FILE_RUNTIME_ETSC = "C:\Program Files (x86)\Adobe\Adobe ExtendScript Toolkit CC\ExtendScript Toolkit.exe"
 FILE_ADOBE_TRUSTED_SCRIPTS = "~\Documents\Adobe Scripts"
 FILE_SPEC_BUILDER_JSX = "spec-builder.jsx"
 FILE_BUILD_CONFIG = "snapshot.ini"
 FOLDER_TARGET = "target"
 FOLDER_SOURCE = "FrameMaker"
-#PROCESS_ID = "p" + str(current_milli_time())
 
 # Configuration file access keys
 KEY_CONFIG_SECTION = "build"
@@ -36,7 +32,6 @@ KEY_DIR_TARGET = "dir.target"
 KEY_BUILD_FILENAME = "build.filename"
 KEY_BUILD_LOCKFILE = "build.lock.file"
 KEY_BUILD_FILELOG = "file.buildlog"
-
 
 # Set up logging
 logger = logging.getLogger()
@@ -140,7 +135,6 @@ def main():
     # start build
     src_script = os.path.join(build_dir, FILE_SPEC_BUILDER_JSX)
     dest_script = os.path.join(os.path.expanduser(FILE_ADOBE_TRUSTED_SCRIPTS), BuildRootName + ".jsx")
-#    JSX_Build_Script_File = os.path.join(trustedScripts_dir, FILE_SPEC_BUILDER_JSX);
     
     logging.info("Start FrameMaker ExtendScript...")
     open(BuildLockFile, "w").close()

@@ -48,26 +48,26 @@ jobs:
           "Run-$env:GITHUB_RUN_NUMBER"          
 
       # Uses the remote self-host to build the ICS
-#      - name: Build ICS-Base Specification
-#        run:  >
-#          python Build\specbuilder.py $env:CONFIG_FILE
-#          "$env:JDF_FILE_NAME $env:JDF_VERSION $env:VERSION"
-#          "$env:JDF_VERSION $env:VERSION"
-#          "Run-$env:GITHUB_RUN_NUMBER"          
+      - name: Build ICS-Base Specification
+        run:  >
+          python Build\specbuilder.py $env:CONFIG_FILE
+          "$env:JDF_FILE_NAME $env:JDF_VERSION $env:VERSION"
+          "$env:JDF_VERSION $env:VERSION"
+          "Run-$env:GITHUB_RUN_NUMBER"          
 
       # Upload the artifact 
-#      - name: Upload ICS Specification artifact
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: ${{ env.JDF_FILE_NAME }}-artifact
-#          path: target/*.pdf
+      - name: Upload ICS Specification artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.JDF_FILE_NAME }}-artifact
+          path: target/*.pdf
           
       # Upload the release
-#      - name: Upload to release
-#        uses: svenstaro/upload-release-action@v1-release
-#        with:
-#          repo_token: ${{ secrets.GITHUB_TOKEN }}
-#          file: target/*.pdf
-#          tag: ${{ github.ref }}
-#          overwrite: true
-#          file_glob: true
+      - name: Upload to release
+        uses: svenstaro/upload-release-action@v1-release
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: target/*.pdf
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
