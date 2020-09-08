@@ -1,13 +1,16 @@
 import logging
 import os
+#import shutil
 import sys
 import time
+#import pathlib
 import configparser
 from subprocess import call
 from subprocess import Popen
 
+
 # constants
-FILE_RUNTIME_FM = "C:\Program Files\Adobe\Adobe FrameMaker 2020\FrameMaker.exe"
+FILE_RUNTIME_FM = "C:\Program Files (x86)\Adobe\AdobeFrameMaker2015\FrameMaker.exe"
 FILE_RUNTIME_ETSC = "C:\Program Files (x86)\Adobe\Adobe ExtendScript Toolkit CC\ExtendScript Toolkit.exe"
 FILE_ADOBE_TRUSTED_SCRIPTS = "~\Documents\Adobe Scripts"
 FILE_SPEC_BUILDER_JSX = "spec-builder.jsx"
