@@ -1,14 +1,3 @@
-# This is the basic workflow to build ICS documentation
-
-name: Release Build
-# The VERSION is the main release number i.e. 1.7 or 2.1
-env:      
-  JDF_VERSION:    '1.7'
-  ICS_FILE_NAME:  ICS JDF DigitalPrinting
-  CONFIG_FILE:    ICS_JDF_DigitalPrinting.ini
-
-# This is the basic workflow to build release documentation
-
 name: Release Build
 ## This section contains ALL variable specific for this project ##
 # The VERSION is the main release number i.e. 1.7 or 2.1
