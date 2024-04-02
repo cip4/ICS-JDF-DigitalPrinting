@@ -5,7 +5,7 @@ name: Release Build
 # The VERSION is the main release number i.e. 1.7 or 2.1 (here for convenience but the git tag is actually used)
 env:
   BUILD_NAME:           ICS-JDF-DIGITALPRINTING
-  #DOCUMENT_VERSION:     '1.7' not required for release build. Uses Tag of build.
+  #DOCUMENT_VERSION:     '1.8' not required for release build. Uses Tag of build.
   DOCUMENT_COVER_TITLE: Integrated Digital Printing ICS
   CONFIG_FILE:          Build\ICS_JDF_DigitalPrinting.ini
   CONFLUENCE_ID:        '1560313992'
